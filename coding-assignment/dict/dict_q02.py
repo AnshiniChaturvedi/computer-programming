@@ -7,4 +7,5 @@ freq_dict = defaultdict(list)
 for num in nums:
     freq = nums.count(num)
     freq_dict[freq].append(num)
-
+    result = {k: list(set(v)) for k, v in freq_dict.items()}
+print(result)
